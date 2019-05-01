@@ -1,10 +1,13 @@
-    <!doctype html> <!--Alcol.html-->
+    
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>ALCOL</title>
 <script>
+var alcol;
+
 function genre(obj) {
 var alcol_a = ["참이슬", "처음처럼", "시원한 청풍", "O2린", "하이트", "잎새주", "참소주","화이트","좋은데이","C1","한라산"];
 var alcol_b = ["Asahi", "TSINGTAO", "Heineken", "BLANC","Hoegaarden","KIFIN","Budweiser","SAPPORO","GUINNESS","STELLA ARTOIS"];
@@ -12,19 +15,27 @@ var alcol_c = ["포천 이동막걸리", "서울 장수막걸리", "부산 금�
 var alcol_d = ["피치크러쉬", "핑크레이디", "블루하와이", "오렌지블러썸","준벅","피나콜라다","모히또","마티니","코스모폴리탄","깔루아커피",];
 var alcol_e = ["스미노프", "스톨리치나야", "앱솔루트","즈블로카","핀란디아","벨루가","바하로사","파이어볼","힙노틱","엑스레이티드"];
 var target = document.getElementById("alcol");
- if(obj.value == "a") var k = alcol_a;
-else if(obj.value == "b") var k = alcol_b;
-else if(obj.value == "c") var k = alcol_c;
-else if(obj.value == "d") var k = alcol_d;
-else if(obj.value == "e") var k = alcol_e;
+ if(obj.value == "a") {var k = alcol_a; alcol="소주";}
+else if(obj.value == "b") {var k = alcol_b; alcol="수입맥주(10위까지)";}
+else if(obj.value == "c") {var k = alcol_c; alcol="막걸리(지역별대표)";}
+else if(obj.value == "d") {var k = alcol_d; alcol="칵테일(10위까지)"}
+else if(obj.value == "e") {var k = alcol_e; alcol="보드카(10위까지)"}
  
   target.options.length = 0;
+
   for (x in k) {
     var opt = document.createElement("option");
     opt.value = k[x];
     opt.innerHTML = k[x];
     target.appendChild(opt);
     }
+    document.getElementById("getd").innerHTML= "술을 선택해 주세요";
+    }
+
+    function gett(ftm){
+    
+      document.getElementById("getd").innerHTML= alcol + "의 " + ftm.value + "을(를) 마실거야!";
+    
     }
     </script>
  
@@ -42,8 +53,11 @@ else if(obj.value == "e") var k = alcol_e;
 <option value="e">보드카(10위까지)</option>
 </select>
 <label for="alcol">술이름</label>
-<select id="alcol" name="alcol"></select>
+<select id="alcol" name="alcol" onchange="gett(this)"></select>
 </fieldset>
-</section>
-</body>
-</html>
+
+<fieldset><legend>당신이 마시고 싶은 술</legend>
+<p id="getd"></p>
+</fieldset>
+
+</section></body></html>
