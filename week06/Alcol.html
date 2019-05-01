@@ -1,0 +1,50 @@
+    
+<!doctype html> <!--Alcol.html-->
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ALCOL</title>
+<script>
+function genre(obj) {
+var alcol_a = ["참이슬", "처음처럼", "시원한 청풍", "O2린", "하이트", "잎새주", "참소주","화이트","좋은데이","C1","한라산"];
+var alcol_b = ["Asahi", "TSINGTAO", "Heineken", "BLANC","Hoegaarden","KIFIN","Budweiser","SAPPORO","GUINNESS","STELLA ARTOIS"];
+var alcol_c = ["포천 이동막걸리", "서울 장수막걸리", "부산 금정산성 막걸리", "정선 아우라지 옥수수 막걸리", "서울 생막걸리","충청 속리산 대추막걸리","나주 솔잎 생 막걸리","경상도 화개장터 막걸리","제주 감귤막걸리","가평 잣 막걸리"];
+var alcol_d = ["피치크러쉬", "핑크레이디", "블루하와이", "오렌지블러썸","준벅","피나콜라다","모히또","마티니","코스모폴리탄","깔루아커피",];
+var alcol_e = ["스미노프", "스톨리치나야", "앱솔루트","즈블로카","핀란디아","벨루가","바하로사","파이어볼","힙노틱","엑스레이티드"];
+var target = document.getElementById("alcolx");
+ if(obj.value == "a") var k = alcol_a;
+else if(obj.value == "b") var k = alcol_b;
+else if(obj.value == "c") var k = alcol_c;
+else if(obj.value == "d") var k = alcol_d;
+else if(obj.value == "e") var k = alcol_e;
+ 
+  target.options.length = 0;
+  for (x in k) {
+    var opt = document.createElement("option");
+    opt.value = k[x];
+    opt.innerHTML = k[x];
+    target.appendChild(opt);
+    }
+    }
+    </script>
+ 
+</head>
+<body>
+<section>
+<fieldset>
+<legend>마시고싶은 술</legend>
+<label for="alcolx">주류</label>
+<select id="alcolx" name="alcolgenre" onchange ="genre(this)">
+<option value="a"selected>소주</option>
+<option value="b">수입맥주(10위까지)</option>
+<option value="c">막걸리(지역별대표)</option>
+<option value="d">칵테일(10위까지)</option>
+<option value="e">보드카(10위까지)</option>
+</select>
+<label for="alcol">술이름</label>
+<select id="alcolx" name="alcol"></select>
+</fieldset>
+</section>
+</body>
+</html>
