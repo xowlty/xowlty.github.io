@@ -9,4 +9,4 @@
 .banner li img{width:30%; vertical-align:middle;}
 /* for mobile*/
 [class*="col-"]{width:100%;}
-@media only screen and (min-width: 600px){ .col-m-3{width:25%;} .col-m-9{width:75%;} .col-3{width:25%;} .col-6{width:50%;}
+@media only screen and (min-width: 600px){ .col-m-3{width:25%;} .col-m-9{width:75%;} .col-m-12{width:100%;} .col-3{width:25%;} .col-6{width:50%;}
