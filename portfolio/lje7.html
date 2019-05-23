@@ -1,0 +1,32 @@
+<!doctype html> <!-- lje7.html --> 
+ <html><head><meta charset="utf-8"/> 
+<meta name="viewport"content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="rwd4.css"/>
+<style>
+*{ box-sizing:border-box; padding:0; margin:0; }
+.row::after { content:""; clear:both; display: table; }
+[class*="col-"]{ float:left; padding:10px;}
+.header, .footer{background-color:#8EA8DB; color:white; padding:10px;}
+.menu ul, .banner ul{list-style-type:none;}
+.menu li{background-color:#B2CCFF; color:black; padding:10px; margin-bottom:10px; box-shadow:0.1px 3px gray; }
+.menu li:hover{background-color:#B5B2FF;}
+.banner li {border:2px solid white; padding:10px; margin-bottom:10px; box-shadow:0.1px 3px gray;}
+.banner li img{width:30%; vertical-align:middle;}
+/* for mobile*/
+[class*="col-"]{width:100%;}
+@media only screen and (min-width: 600px){ .col-m-3{width:25%;} .col-m-9{width:75%;} .col-m-12{width:100%;} }
+@media only screen and (min-width: 768px){.col-3{width:25%;} .col-6{width:50%;}}
+</style>
+<title>RWD실습</title></head>
+  <body><header class="header"><a href="portfolio.html"><h2>20XX 이정은 포트폴리오</h2></a></header><div class="row"></div>
+<div id="main">
+<nav class="col-3 col-m-3 menu">
+<ul><li><a href="lje.html">학력</a></li><li><a href="lje1.html">경력</a></li><li><a href="lje2.html">수업 수강 내역</a></li><li><a href="lje3.html">과목별 프로젝트 설명</a></li><li><a href="lje4.html">공모전</a></li><li><a href="lj5e.html">동아리</a></li><li><a href="lje6.html">봉사활동</a></li><li><a href="lje7.html">ect.</a></li></ul></nav>
+<section class="col-6 col-m-9">
+ <h4>취득해야 할 자격증</h4><hr/><ul><li>정보처리기사(4학년 이상 취득가능)</li><li>리눅스 마스터</li><li>네트워크관리사</li><li>국제자격증(CCNA, CCNP, MCITP, OCJP 등)</li></ul>
+</section>
+<aside class="col-3 col-m-12 banner">
+<ul><li><img src="2362948-200.png"></li><li><img src="2534469-200.png"></li><li><img src="2200551-200.png"></li></ul></aside>
+ </div><div class="row"></div>
+<footer class="footer"><h4>Copyright20XX Korea.</h4></footer>
+</body></html> 
